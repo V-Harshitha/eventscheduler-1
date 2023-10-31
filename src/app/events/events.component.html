@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Events</title>
+        <link href="events.component.css">
+    </head>
+    <body>
+        <header>
+            <!--<img src="assets/es.PNG" width="300px" height="150px">-->
+            <h1>Event Scheduler</h1>
+            <nav>
+              <ul>
+                <li><a routerLink="/home">Home
+                  <img src="assets/home3.png" width="20px" height="20px">
+                </a>
+                </li>
+                <li><a routerLink="/create">Events
+                  <img src="assets/event.png" width="20px" height="20px"></a></li>
+                <li><a routerLink="/event-calendar">Calendar
+                  <img src="assets/calendar2.png" width="20px" height="20px"></a></li>
+                <!--<li><a href="#">About</a></li>-->
+                <li><a routerLink="/form">Form<img src="assets/form.png" width="20px" height="18px"></a></li>
+                <li><a routerLink="/getstarted">LogOut<img src="assets/logout.png" width="20px" height="17px"></a></li>
+              </ul>
+            </nav>
+          </header>
+        <main>
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <ol>
+                  <li *ngFor="let event of events">
+                <div class="event-tab">
+                    <div class="event-tab-header">
+                        <!-- <h3>Event </h3> -->
+                        <p>Date: {{event.eventDate}}</p>
+                    </div>
+                    <div class="event-tab-content">
+                        <p>Description: {{event.eventName}}</p>
+                        <p>Location: {{event.eventLocation}}</p>
+                        <a routerLink="/details" class="event-details-button">Details</a>
+                    </div>
+                </div>
+              </li>
+              </ol>
+              <!-- <div *ngFor="let item of events">
+                <div *ngIf="item.is_available" class="cards">
+                  <p>Date: {{item.eventDate}}</p>
+                  <h4>Description : {{item.eventName}}</h4>
+                  <h4>Location : {{item.eventLocation}}</h4>
+                </div>
+              </div> -->
+            </section>
+        </main>
+    
+       <!-- <footer>
+        <p>&copy; 2023 Event Scheduler</p>
+       </footer> -->
+    </body>
+</html>

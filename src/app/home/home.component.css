@@ -1,0 +1,150 @@
+header {
+  /*background-color:rgb(159, 159, 224);*/
+  color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature:hover{
+  background: linear-gradient(to bottom,rgb(251, 240, 242),pink);
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a img {
+  display: inline;
+  margin-right: 1rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: -10px;
+  background: linear-gradient(to bottom,rgb(224, 211, 211),rgb(118, 128, 193));
+  
+}
+.para{
+  color: aqua;
+}
+
+.first {
+  text-align: center;
+  padding: 2rem;
+}
+
+.first h2 {
+  font-size: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  margin-top: -5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+}
+
+.feature i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  /*background-color: rgb(159, 159, 224);*/
+  color: black;
+}
+
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/*main:hover{
+  background: linear-gradient(to bottom,rgb(228, 228, 242),rgb(148, 148, 186));
+}*/
+
+/*body{
+  background: linear-gradient(white,rgb(194, 181, 181));
+}*/
+
+div {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,126 @@
+/* Center the entire event calendar section */
+.event-calendar-section {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the header */
+.event-calendar-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style the FullCalendar container */
+#calendar {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the event form container */
+.event-form {
+  margin-top: 20px;
+}
+
+/* Style the label for the event input */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the event input field */
+#event-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Style the "Add Event" button */
+#add-event {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Add Event" button */
+#add-event:hover {
+  background-color: #0056b3;
+}
+
+/* Style the "Add Event" button when it's disabled */
+#add-event:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Style for the "event-calendar works!" message (optional) */
+p {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+header {
+  /*background-color:rgb(159, 159, 224);*/
+  color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a img {
+  display: inline;
+  margin-right: 1rem;
+}
+main{
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: -10px;
+}
+.context-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.context-menu button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.context-menu button:hover {
+  background-color: #f0f0f0;
+}

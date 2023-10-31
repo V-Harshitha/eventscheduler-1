@@ -1,0 +1,123 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Event Scheduler</title>
+    <link  href="home.component.css">
+  </head>
+  <body>
+    
+    <header>
+      <!-- <img src="assets/es.PNG" width="400px" height="100px"> -->
+      <h1>Event Scheduler</h1>
+      <nav>
+        <ul>
+          <li><a routerLink="/home">Home
+            <img src="assets/home3.png" width="20px" height="20px">
+          </a>
+          </li>
+          <li><a routerLink="/create">Events
+            <img src="assets/event.png" width="20px" height="20px"></a></li>
+          <li><a routerLink="/event-calendar">Calendar
+            <img src="assets/calendar2.png" width="20px" height="20px"></a></li>
+          <!--<li><a href="#">About</a></li>-->
+          <li><a routerLink="/form">Form<img src="assets/form.png" width="20px" height="18px"></a></li>
+          <li><a routerLink="/getstarted">LogOut<img src="assets/logout.png" width="20px" height="17px"></a></li>
+        </ul>
+      </nav>
+    </header>
+   
+    <main>
+      <section class="first">
+        
+          <!-- <h4>Timer Value:{{timerValue}}</h4> -->
+        
+        <h2>Welcome to Event Scheduler</h2>
+        <p>Plan and Manage your Events Effortlessly</p>
+        <p>ALL-IN-ONE EVENT MANAGEMENT SOFTWARE</p>
+        <a href="/getstarted" class="cta-button">Get Started</a><br><br>
+        
+     
+        <!-- <table>
+          <thead>
+            <tr>
+              <th>Event Name</th>
+              <th>Event Date</th>
+              <th>Event Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let event of events">
+              <td>{{ event.eventName }}</td>
+              <td>{{ event.eventDate }}</td>
+              <td>{{ event.eventLocation }}</td>
+            </tr>
+          </tbody>
+        </table> -->
+        
+        <!-- <div>
+          <input [(ngModel)]="userName" placeholder="Enter User Name"><br><br>
+          <label for="country">Country:</label><br>
+          <select id="country" name="country" [(ngModel)]="country">
+            <option value="India">India</option>
+            <option value="Srilanka">Srilanka</option>
+            <option value="USA">USA</option>
+            <option value="Other">Other</option>
+          </select>
+          <fieldset>
+          <legend>Gender:</legend>
+          <label for="Male">
+          <input type="radio" id="male" name="gender" [(ngModel)]="selectedColor" value="Male">Male
+          </label>
+          <label for="Female">
+            <input type="radio" id="female" name="gender" [(ngModel)]="selectedColor" value="Female">Female
+          </label>
+        </fieldset><br>
+         <button (click)="submitText()"> Submit </button>
+        </div> -->
+        <!-- <nav>
+          <a routerLink="/product"> product </a> 
+        </nav> -->
+      
+       
+      </section>
+      <section class="features">
+        <div class="feature">
+          <i class="fas fa-cog"></i>
+          <h3>Customization</h3>
+          <a routerLink="/customize">Customize Event Details & Settings</a><br><br>
+          <img src="assets\customize.jpg" width="300px" height="150px">
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Invite Guests</h3>
+          <a routerLink="/inviteguest">Invite Friends & Colleagues To Your Events</a><br><br>
+          <img src="assets\invite.png" width="300px" height="150px">
+        </div>
+       
+        <div class="feature">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Event Calendar</h3>
+          <a routerLink="/event-calendar">View & Manage Your Events On Calendar</a><br><br>
+          <img src="assets\cal.jfif">
+
+        </div>
+      </section>
+    </main>
+    
+    <!--ss<div>
+      <input [(ngModel)]="userName" placeholder="Enter User Name">
+      <button (click)="submitText()">Submit</button>
+    </div>
+    <nav>
+      <a routerLink="/form">Form</a>
+    </nav>-->
+    <footer>
+      <p>&copy; 2023 Event Scheduler</p>
+    </footer>
+    
+  </body>
+</html>

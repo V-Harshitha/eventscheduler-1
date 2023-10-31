@@ -1,0 +1,11 @@
+<!-- <p>edit-event-dialog works!</p> -->
+<h2>Edit Event</h2>
+<form (ngSubmit)="saveEditedEvent()">
+    <input [(ngModel)]="editedEvent.title" placeholder="Event Title" required /><br>
+    <input [(ngModel)]="editedEvent.start" type="datetime-local" placeholder="Start Date" required /><br>
+    <input [(ngModel)]="editedEvent.end" type="datetime-local" placeholder="End Date" required /><br>
+    <input [(ngModel)]="editedEvent.location" placeholder="Location" required /><br>
+    <button type="submit">Save</button>
+    <button type="button" (click)="closeDialog()">Cancel</button>
+</form>
+  

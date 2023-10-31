@@ -1,0 +1,79 @@
+.login-container {
+  margin-top: 130px !important;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+ body {
+    background-image: url('src\assets\login4.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 20rem;
+ 
+  }
+h2 {
+  text-align: center;
+  color: #333;
+}
+h1{
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: -10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #000;
+}
+/* Style for the disabled button */
+button[disabled] {
+  background-color: #ccc; /* Gray background color */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' */
+  opacity: 0.7; /* Reduce opacity to indicate it's disabled */
+  color: #888; /* Text color for disabled button */
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+

@@ -1,0 +1,40 @@
+<!-- <p>signup works!</p> -->
+<body>
+<div class="signup-container">
+  <h2>Sign Up</h2>
+  <form (ngSubmit)="signup()" #signupForm="ngForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" [(ngModel)]="userData.username" required minlength="4">
+      <div *ngIf="signupForm.controls['username'].hasError('required') && signupForm.controls['username'].touched">
+        <p class="error-message">Username is required</p>
+      </div>
+      <div *ngIf="signupForm.controls['username'].hasError('minlength') && signupForm.controls['username'].touched">
+        <p class="error-message">Username must be at least 4 characters long</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="userData.email" required email>
+      <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched">
+        <p class="error-message">Email is required</p>
+      </div>
+      <div *ngIf="signupForm.controls['email'].hasError('email') && signupForm.controls['email'].touched">
+        <p class="error-message">Invalid email format</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="userData.password" required minlength="8">
+      <div *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched">
+        <p class="error-message">Password is required</p>
+      </div>
+      <div *ngIf="signupForm.controls['password'].hasError('minlength') && signupForm.controls['password'].touched">
+        <p class="error-message">Password must be at least 8 characters long</p>
+      </div>
+    </div>
+    <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+  </form>
+</div>
+</body>
+  

@@ -1,0 +1,13 @@
+<!-- <p>event-dialog works!</p> -->
+<div #eventDialog class="event-dialog">
+  <h2>Add Event</h2>
+  <form (ngSubmit)="saveEvent()">
+    <input [(ngModel)]="event.title" placeholder="Event Title" required />
+    <input [(ngModel)]="event.start" type="datetime-local" placeholder="Start Date" required />
+    <input [(ngModel)]="event.location" placeholder="Location" required />
+    <button type="submit">Save</button>
+  </form>
+  <button (click)="closeDialog()">Cancel</button>
+</div>
+
+  

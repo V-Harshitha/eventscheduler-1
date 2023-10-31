@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="calendar.component.css">
+  </head>
+  <body>
+     
+    <header>
+      <!--<img src="assets/es.PNG" width="300px" height="150px">-->
+      <h1>Event Scheduler</h1>
+      <nav>
+        <ul>
+          <li><a routerLink="/home">Home
+            <img src="assets/home3.png" width="20px" height="20px">
+          </a>
+          </li>
+          <li><a routerLink="/create">Events
+            <img src="assets/event.png" width="20px" height="20px"></a></li>
+          <li><a routerLink="/cal">Calendar
+            <img src="assets/calendar2.png" width="20px" height="20px"></a></li>
+          <!--<li><a href="#">About</a></li>-->
+          <li><a routerLink="/form">Form<img src="assets/form.png" width="20px" height="18px"></a></li>
+          <li><a routerLink="/login">LogOut<img src="assets/logout.png" width="20px" height="18px"></a></li>
+        </ul>
+      </nav>
+    </header>
+   
+    <main>
+    <div class="event-calendar-section">
+      <h2>Event Calendar</h2>
+      <!--<p>View and manage your events on a calendar</p>-->
+      
+    </div>
+
+     <div class="calendar">
+      <div class="calendar-header">
+        <button (click)="updateCalendar('prev')">Previous</button>
+        <h2>{{ currentDate | date: 'MMMM yyyy' }}</h2>
+        <button (click)="updateCalendar('next')">Next</button>
+      </div>
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            <th *ngFor="let dayName of dayNames">{{ dayName }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let week of calendar">
+            <td *ngFor="let day of week">
+              <div class="calendar-day" (click)="toggleEventInput(day)">
+                {{ day ? day.getDate() : '' }}
+              </div>
+              
+              <div class="events" *ngIf="selectedDate === day">
+                <div *ngFor="let event of getEventsForDate(day)">
+                  {{ event.title }}
+                </div>
+                
+                <div class="event-input">
+                  <input type="text" [(ngModel)]="newEventTitle" placeholder="Add event...">
+                  <button (click)="addEvent(day, newEventTitle)">Add</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    </main>
+    <footer>
+      <p>&copy; 2023 Event Scheduler</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<header>
+   <!--<img src="assets/es.PNG" width="300px" height="150px">-->
+   <h1>Event Scheduler</h1>
+   <nav>
+     <ul>
+       <li><a routerLink="/home">Home
+         <img src="assets/home3.png" width="20px" height="20px">
+       </a>
+       </li>
+       <li><a routerLink="/create">Events
+         <img src="assets/event.png" width="20px" height="20px"></a></li>
+       <li><a routerLink="/event-calendar">Calendar
+         <img src="assets/calendar2.png" width="20px" height="20px"></a></li>
+       <!--<li><a href="#">About</a></li>-->
+       <li><a routerLink="/form">Form<img src="assets/form.png" width="20px" height="18px"></a></li>
+       <li><a routerLink="/getstarted">LogOut<img src="assets/logout.png" width="20px" height="17px"></a></li>
+     </ul>
+   </nav>
+ </header>
+
+ <main>
+<full-calendar #calendar [options]="calendarOptions" (eventClick)="openEditEventDialog($event)" >
+</full-calendar>
+</main>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="event-calendar-section">
+  <h2>Event Calendar</h2>
+  <div id="calendar"></div>
+</div> -->
+  <!-- <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+       <mat-label>Event Name</mat-label>
+       <input matInput formControlName="eventName" placeholder="Event Name">
+    </mat-form-field>
+   
+    <mat-form-field>
+       <mat-label>Event Date</mat-label>
+       <input matInput [matDatepicker]="picker" formControlName="eventDate" placeholder="Event Date">
+       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+       <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+   
+    <mat-form-field>
+       <mat-label>Event Time</mat-label>
+       <input matInput formControlName="eventTime" placeholder="Event Time">
+    </mat-form-field>
+   
+    <button mat-raised-button type="submit">Add Event</button>
+   </form> -->
+
+
+
+  

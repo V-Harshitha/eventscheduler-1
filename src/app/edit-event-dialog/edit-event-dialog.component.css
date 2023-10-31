@@ -1,0 +1,40 @@
+/* Apply a general style to the form container */
+form {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Style the form elements */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style the buttons */
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Style the cancel button differently */
+  button[type="button"] {
+    background-color: #ccc;
+  }
+  
+  /* Add some hover effect to buttons */
+  button:hover {
+    background-color: #0056b3;
+  }
+h2{
+    text-align: center;
+}  

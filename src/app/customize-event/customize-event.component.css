@@ -1,0 +1,121 @@
+/* Styling for the customize event section */
+.customize-event-section {
+    /* background-color: #f9f9f9; */
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .customize-event-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Description styling */
+  .customize-event-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Add your custom CSS styles for the form and UI elements */
+  /* Styling for the customization section */
+.customize-event-section {
+  /* background-color: #f9f9f9; */
+  padding: 30px;
+  text-align: center;
+}
+
+/* Title styling */
+.customize-event-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.button-container{
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  /*background-color:rgb(159, 159, 224);*/
+  color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a img {
+  display: inline;
+  margin-right: 1rem;
+}
+main{
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: -10px;
+  /* background: linear-gradient(to bottom,rgb(224, 211, 211),rgb(118, 128, 193)); */
+}
+.error-message{
+  color: red;
+}
+.event-added-message{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
