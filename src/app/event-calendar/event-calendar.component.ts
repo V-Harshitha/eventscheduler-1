@@ -38,7 +38,16 @@ export class EventCalendarComponent implements AfterViewInit {
     eventTextColor: 'white',
     eventColor: 'blue',
     themeSystem: 'bootstrap',
-    events: [], 
+    // events: [],
+    events: this.eventData.getAllEvents().map((event) => {
+      return {
+        title: `${event.eventName} - ${event.eventLocation}`,
+        start: event.eventDate,
+        end: event.eventDate,
+        location: event.eventLocation,
+        // Include any other event properties you need
+      };
+    }), 
     eventClick: this.handleEventClick.bind(this),
   };
 
@@ -49,23 +58,40 @@ export class EventCalendarComponent implements AfterViewInit {
   handleEventClick(info: any) {
     const clickedEvent = info.event;
     console.log('Clicked Event:', clickedEvent);
-    this.openEditEventDialog(clickedEvent);
+    this. openEventDetailsModal(clickedEvent);
   }
  
-  openEditEventDialog(info: any) {
-    // const clickedEvent = info.event;
+  // openEditEventDialog(info: any) {
+  //   // const clickedEvent = info.event;
+  //   const dialogRef = this.dialog.open(EditEventDialogComponent, {
+  //     width: '400px',
+  //     data: { event:info.event },
+  //   });
+
+  //   dialogRef.afterClosed().subscribe((editedEvent) => {
+  //     if (editedEvent) {
+  //       // Update the edited event in your data service or calendar
+  //       console.log('Edited Event:', editedEvent);
+  //     }
+  //   });
+  // }
+  openEventDetailsModal(event: any) {
     const dialogRef = this.dialog.open(EditEventDialogComponent, {
       width: '400px',
-      data: { event:info.event },
+      data: event, // Pass the event data to the modal
     });
-
-    dialogRef.afterClosed().subscribe((editedEvent) => {
-      if (editedEvent) {
-        // Update the edited event in your data service or calendar
-        console.log('Edited Event:', editedEvent);
+  
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result === 'event-deleted') {
+        // Implement event deletion logic here
+      } else if (result === 'event-updated') {
+        // Implement event update logic here
+      } else if (result === 'add-reminder') {
+        // Implement reminder addition logic here
       }
     });
   }
+  
   updateCalendarEventSource(events: any[]) {
     this.calendarComponent.getApi().refetchEvents();
     this.calendarComponent.getApi().addEventSource({ events });
@@ -75,7 +101,7 @@ export class EventCalendarComponent implements AfterViewInit {
   addEvent() {
     if (this.eventName && this.eventDate && this.eventLocation) {
       const event = {
-        title: this.eventName,
+        title:`${this.eventName} - ${this.eventLocation}`,
         start: this.eventDate,
         end: this.eventDate,
         location: this.eventLocation,
@@ -93,6 +119,15 @@ export class EventCalendarComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.loadEvents();
     this.calendarComponent.getApi();
+    this.calendarOptions.events = this.eventData.getAllEvents().map((event) => {
+      return {
+        title: `${event.eventName} - ${event.eventLocation}`,
+        start: event.eventDate,
+        end: event.eventDate,
+        location: event.eventLocation,
+        // Include any other event properties you need
+      };
+    });
   }
 
 

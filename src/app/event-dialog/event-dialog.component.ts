@@ -22,7 +22,7 @@ export class EventDialogComponent {
   }
 
   saveEvent() {
-    // You can perform validation or additional logic here before saving the event
+
     this.dialogRef.close(this.event);
   }
 

@@ -1,4 +1,4 @@
-/* Center the entire event calendar section */
+
 .event-calendar-section {
   text-align: center;
   margin: 20px auto;
@@ -9,13 +9,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the header */
 .event-calendar-section h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-/* Style the FullCalendar container */
+
 #calendar {
   width: 100%;
   margin: 0 auto;
@@ -25,19 +24,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the event form container */
+
 .event-form {
   margin-top: 20px;
 }
 
-/* Style the label for the event input */
+
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* Style the event input field */
+
 #event-input {
   width: 100%;
   padding: 10px;
@@ -46,7 +45,6 @@ label {
   margin-bottom: 10px;
 }
 
-/* Style the "Add Event" button */
 #add-event {
   background-color: #007bff;
   color: #fff;
@@ -57,18 +55,15 @@ label {
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the "Add Event" button */
 #add-event:hover {
   background-color: #0056b3;
 }
 
-/* Style the "Add Event" button when it's disabled */
 #add-event:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-/* Style for the "event-calendar works!" message (optional) */
 p {
   text-align: center;
   font-weight: bold;

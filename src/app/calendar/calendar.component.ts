@@ -20,7 +20,7 @@ export class CalendarComponent implements OnInit {
   }
 
   ngOnInit() {
-    // You can add further initialization logic here
+   
   }
 
   getEventsForDate(date: Date | null): { date: Date, title: string }[] {

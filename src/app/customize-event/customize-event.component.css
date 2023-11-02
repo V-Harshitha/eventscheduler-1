@@ -1,40 +1,39 @@
-/* Styling for the customize event section */
+
 .customize-event-section {
     /* background-color: #f9f9f9; */
     padding: 30px;
     text-align: center;
   }
   
-  /* Title styling */
+
   .customize-event-section h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 10px;
   }
   
-  /* Description styling */
+
   .customize-event-section p {
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
   }
   
-  /* Add your custom CSS styles for the form and UI elements */
-  /* Styling for the customization section */
+
 .customize-event-section {
   /* background-color: #f9f9f9; */
   padding: 30px;
   text-align: center;
 }
 
-/* Title styling */
+
 .customize-event-section h2 {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
 }
 
-/* Form styling */
+
 form {
   display: flex;
   flex-direction: column;

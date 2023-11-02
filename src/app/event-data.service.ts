@@ -23,6 +23,7 @@ export class EventDataService {
     'is_available':'true'
   }];
   // events:any[]=[];
+  // private events: any[] = [];
   eventName:string='';
   eventDate:string='';
   eventLocation:string='';
@@ -43,12 +44,7 @@ export class EventDataService {
   getAllEvents() {
     return this.events;
   }
-  // deleteEvent(eventId: string) {
-  //   const index = this.events.findIndex((event) => event.id === eventId);
-  //   if (index !== -1) {
-  //     this.events.splice(index, 1);
-  //   }
-  // }
+ 
 
   // updateEvent(event: any) {
   //   const index = this.events.findIndex((e) => e.id === event.id);
@@ -59,5 +55,11 @@ export class EventDataService {
 
   private generateUniqueId(): number{
     return this.events.length+1;
+  }
+  deleteEvent(event: any) {
+    const index = this.events.findIndex((e) => e === event);
+    if (index !== -1) {
+      this.events.splice(index, 1);
+    }
   }
 }

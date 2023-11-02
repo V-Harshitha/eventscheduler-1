@@ -20,4 +20,20 @@ export class EditEventDialogComponent {
     closeDialog(){
       this.dialogRef.close();
     }
+    updateEvent() {
+      // Implement your event update logic here
+      // Close the dialog after updating the event
+      this.dialogRef.close('event-updated');
+    }
+    deleteEvent() {
+      // Implement your event deletion logic here
+      // Close the dialog after deleting the event
+      this.dialogRef.close('event-deleted');
+    }
+    addReminder(){
+
+    }    
+    editEvent(){
+      
+    }
 }

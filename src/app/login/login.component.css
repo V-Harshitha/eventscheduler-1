@@ -64,12 +64,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #000;
 }
-/* Style for the disabled button */
+
 button[disabled] {
-  background-color: #ccc; /* Gray background color */
-  cursor: not-allowed; /* Change cursor to 'not-allowed' */
-  opacity: 0.7; /* Reduce opacity to indicate it's disabled */
-  color: #888; /* Text color for disabled button */
+  background-color: #ccc; 
+  cursor: not-allowed; 
+  opacity: 0.7; 
+  color: #888;
 }
 .error-message {
   color: red;

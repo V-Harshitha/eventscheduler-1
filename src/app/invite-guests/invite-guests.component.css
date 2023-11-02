@@ -1,32 +1,31 @@
-/* Styling for the invite guests section */
+
 .invite-guests-section {
     /* background-color: #f9f9f9; */
     padding: 30px;
     text-align: center;
   }
   
-  /* Title styling */
+
   .invite-guests-section h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 10px;
   }
-  
-  /* Description styling */
+
   .invite-guests-section p {
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
   }
   
-  /* Email input and button container */
+
   .email-input {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  /* Email input field styling */
+
   .email-input input[type="email"] {
     width: 300px;
     padding: 10px;
@@ -35,7 +34,7 @@
     font-size: 16px;
   }
   
-  /* Invite button styling */
+
   .email-input .invite-button {
     background-color: #007bff;
     color: #fff;
@@ -47,7 +46,7 @@
     transition: background-color 0.3s ease;
   }
   
-  /* Invite button hover effect */
+
   .email-input .invite-button:hover {
     background-color: #0056b3;
   }
