@@ -71,9 +71,29 @@ button[disabled] {
   opacity: 0.7; 
   color: #888;
 }
-.error-message {
-  color: red;
-  font-weight: bold;
-  margin-top: 5px;
+.error {
+  color: red; 
+  /* font-weight: bold; */
+   margin-top: 5px;
 }
+/* .login-message {
+  color: green;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+} */
+
+.login-message {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #4CAF50; /* Green border */
+  color: #4CAF50; /* Green text */
+  background-color: #E9F7EF; /* Light green background */
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+
 

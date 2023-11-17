@@ -5,8 +5,8 @@
         <link href="form.component.css">
     </head>
     <body>
-      <header>
-        <!--<img src="assets/es.PNG" width="300px" height="150px">-->
+      <!-- <header>
+        <img src="assets/es.PNG" width="300px" height="150px">
         <h1>Event Scheduler</h1>
         <nav>
           <ul>
@@ -18,61 +18,95 @@
               <img src="assets/event.png" width="20px" height="20px"></a></li>
             <li><a routerLink="/event-calendar">Calendar
               <img src="assets/calendar2.png" width="20px" height="20px"></a></li>
-            <!--<li><a href="#">About</a></li>-->
+            <li><a href="#">About</a></li>
             <li><a routerLink="/form">Form<img src="assets/form.png" width="20px" height="18px"></a></li>
             <li><a routerLink="/getstarted">LogOut<img src="assets/logout.png" width="20px" height="17px"></a></li>
           </ul>
         </nav>
-      </header>
+      </header> -->
    
     <main>
+<!--     
+    <h2>Registration Form</h2> -->
     <div class="registration-form">
-    <h2>Registration Form</h2>
-    <form>
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" [(ngModel)]="username" required>
-      </div>
-      <div class="form-group">
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" [(ngModel)]="firstName" required>
-      </div>
-      <div class="form-group">
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastName" required>
-      </div>
-      <div class="form-group">
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" [(ngModel)]="gender" required>
-        <option value="option1">Male</option>
-        <option value="option2">Female</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" [(ngModel)]="password" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" [(ngModel)]="email" required>
-      </div>
-      <div class="form-group">
-        <label for="phonenumber">Phone Number:</label>
-        <input type="tel" id="phonenumber" name="phonenumber" [(ngModel)]="phoneNumber" required>
-      </div>
-      <div class="form-group">
-        <div class="checkbox">
-          <input type="checkbox" id="checkbox1" name="checkbox1" required>
-          <label for="checkbox1">Accept the conditions</label>
+      
+      <h2>Registration Form</h2>
+      <form >
+        <div class="form-group">
+         
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" [(ngModel)]="username" required #usernameInput="ngModel">
+          <div *ngIf="usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)" class="error">
+            Username is required.
+          </div>
         </div>
-      </div>
-      <button (click)="onSubmit()">Submit</button>
-    </form>
-  </div>
+        <div class="form-group">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" [(ngModel)]="firstName" required #firstnameInput="ngModel">
+          <div *ngIf="firstnameInput.invalid && (firstnameInput.dirty || firstnameInput.touched)" class="error">
+            First Name is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname" [(ngModel)]="lastName" required #lastnameInput="ngModel">
+          <div *ngIf="lastnameInput.invalid && (lastnameInput.dirty || lastnameInput.touched)" class="error">
+            Last Name is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" [(ngModel)]="gender" required #genderInput="ngModel">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <div *ngIf="genderInput.invalid && (genderInput.dirty || genderInput.touched)" class="error">
+            Gender is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required #passwordInput="ngModel">
+          <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="error">
+            Password is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" [(ngModel)]="email" required  #emailInput="ngModel">
+          <div *ngIf="email && !isValidEmail(email)" class="error">
+            Invalid email format.
+          </div>
+          <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error">
+            Email is required and must be a valid email format.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phonenumber">Phone Number:</label>
+          <input type="tel" id="phonenumber" name="phonenumber" [(ngModel)]="phoneNumber" required #phonenumberInput="ngModel">
+          <div *ngIf="phoneNumber && !isValidPhoneNumber(phoneNumber)" class="error">
+            Invalid phone number. 
+          </div>
+          <div *ngIf="phonenumberInput.invalid && (phonenumberInput.dirty || phonenumberInput.touched)" class="error">
+            Phone Number is required and must be valid.
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <input type="checkbox" id="checkbox1" name="checkbox1" required>
+            <label for="checkbox1">Accept the conditions</label>
+          </div>
+        </div>
+        <button type="submit" (click)="registerUser()" [disabled]="!username || !password || !firstName || !lastName || !gender || !email || !phoneNumber ||!password">Submit</button>
+      </form>
+    </div>
+    <div *ngIf="formSubmitted" class="formSubmitted">{{formSubmitted}}</div>
+    
+  
     </main>
-  <footer>
+  <!-- <footer>
     <p>&copy; 2023 Event Scheduler</p>
-  </footer>
+  </footer> -->
 </body>
 </html>
   

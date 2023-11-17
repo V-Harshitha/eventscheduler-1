@@ -26,9 +26,9 @@ export class EventsComponent implements OnInit {
       // this.eventLocation = eventData.eventLocation;
     }
     loadItems(){
-    //   for(let i=0;i<this.eventsPerPage;i++){
-    //    this.events.push(`events`);
-    // }
+      for(let i=0;i<this.eventsPerPage;i++){
+       this.events.push(`events`);
+    }
     }
     @HostListener('window:scroll',[])
     onScroll(){

@@ -7,23 +7,29 @@
   <body>
     <!--<img src="assets/es.PNG" width="300px" height="150px">-->
     <h1>Event Scheduler</h1>
+    <p [ngClass]="{'login-message': loginMessage === 'Login Successful!', 'error-message': loginMessage !== 'Login Successful!'}" *ngIf="loginMessage">{{ loginMessage }}</p>
+
     <div class="login-container">
       <h2>Login</h2>
       <form (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" id="username" name="username" [(ngModel)]="username" required >
-          <!-- <div *ngIf="loginForm.get('username')?.hasError('required')" class="error-message">Username is required</div> -->
-          <div *ngIf="loginForm.get('username')?.hasError('minlength')" class="error-message">Username must be at least 4 characters long</div>
-     
+          <input type="text" id="username" name="username" [(ngModel)]="username" required #usernameInput="ngModel">
+          <div *ngIf="usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)" class="error">
+            Username is required.
+          </div>
           </div>
         
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required #passwordInput="ngModel">
+          <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="error">
+            Password is required.
+          </div>
         </div>
         <button type="submit" [disabled]="!username || !password">Login</button>
-        <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        <!-- <p *ngIf="loginMessage">{{ loginMessage }}</p> -->
+        <p>Don't have an account? <a routerLink="/form">Sign up</a></p>
         <a href="/forgot-password">Forgot Password?</a>
 
       </form>

@@ -8,7 +8,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventsComponent } from './events/events.component';
 import { FormComponent } from './form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessComponent } from './success/success.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -24,6 +24,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { GetstartedComponent } from './getstarted/getstarted.component';
 import { DetailsComponent } from './details/details.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -68,16 +69,18 @@ const routes: Routes = [
   
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MatDialogModule,
     FullCalendarModule,
     MatSnackBarModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

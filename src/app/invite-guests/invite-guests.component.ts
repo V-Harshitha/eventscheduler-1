@@ -11,10 +11,10 @@ export class InviteGuestsComponent {
 
   inviteGuest() {
     if (this.guestEmail) {
-      // Compose the mailto URI
+
       const mailtoUri = `mailto:${this.guestEmail}?subject=Invitation&body=Hello, please join our event!`;
 
-      // Open the user's default email client
+     
       window.location.href = mailtoUri;
     } else {
       alert('Please enter a valid email address before inviting.');
